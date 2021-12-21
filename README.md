@@ -4,7 +4,7 @@ Template for Micronaut application for Java 11+.
 
 ## Features
 - Micronaut Plugin configured
-- Spotless for Code Style and Formatting.
+- Spotless for [Code Style](https://goodforgod.dev/posts/3/) and Formatting.
 - .gitignore and .gitattributes for proper ignore and symbols check.
 - .editorconfig for simple configs code style and encoding UTF-8.
 - Proper Gradle and Gradle Wrapper configuration.
@@ -14,41 +14,41 @@ Template for Micronaut application for Java 11+.
 - ShadowJar configured
 - JaCoCo configured
 - Test and Run sections configured
-- Test and runtime dependencies' setup for basic application
-- OpenAPI/Swagger-UI/Rapidoc management configured
+- [OpenAPI/Swagger-UI/Rapidoc](https://github.com/GoodforGod/micronaut-management-openapi) management configured
 
-## Run
+### Run
 
 ```
 gradlew run
 ```
 
-## Code Style
+### Code Style
 
 Code Style is provided and configured with Spotless, you can read more about [Code Style here](https://goodforgod.dev/posts/3/)
 
-### Check
+Check Code Style:
 
 ```shell
-./gradlew spotlessCheck
+gradlew spotlessCheck
 ```
 
-### Apply
+Apply Code Style:
 
 ```shell
-./gradlew spotlessApply
+gradlew spotlessApply
 ```
 
 ## Test
 
 ```shell
-./gradlew test
+gradlew test
 ```
 
 ## OpenAPI
 
-Template configured OpenAPI/Swagger-UI/Rapidoc exposure and you can access they after running service.
+Template configured [OpenAPI/Swagger-UI/Rapidoc])(https://github.com/GoodforGod/micronaut-management-openapi)
+exposure and you can access they after running service.
 
-- **/openapi** - Here is OpenAPI file is available.
-- **/swagger-ui** - Here is Swagger-UI file is available.
-- **/rapidoc** - Here is Rapidoc file is available.
+- **/openapi** - OpenAPI endpoint.
+- **/swagger-ui** - Swagger-UI endpoint.
+- **/rapidoc** - Rapidoc endpoint.

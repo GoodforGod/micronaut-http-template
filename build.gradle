@@ -32,18 +32,19 @@ micronaut {
 }
 
 dependencies {
-    annotationProcessor "io.micronaut:micronaut-inject-java"
     annotationProcessor "io.micronaut.openapi:micronaut-openapi"
+    annotationProcessor "io.micronaut:micronaut-inject-java"
 
     compileOnly "io.micronaut:micronaut-inject-java"
+    compileOnly "io.swagger.core.v3:swagger-annotations"
 
     implementation "io.micronaut:micronaut-http-server-netty"
     implementation "io.micronaut:micronaut-management"
     implementation "io.micronaut.micrometer:micronaut-micrometer-core"
     implementation "io.micronaut.micrometer:micronaut-micrometer-registry-prometheus"
 
-    implementation "io.goodforgod:micronaut-management-openapi:1.0.0"
     implementation "io.projectreactor:reactor-core"
+    implementation "io.goodforgod:micronaut-management-openapi:1.0.0"
     implementation "org.jetbrains:annotations:22.0.0"
     implementation "ch.qos.logback:logback-classic:1.2.8"
 
