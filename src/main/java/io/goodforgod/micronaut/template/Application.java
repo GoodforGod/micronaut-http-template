@@ -23,7 +23,7 @@ import org.slf4j.LoggerFactory;
 @SecurityScheme(
         name = SecurityConfig.OAUTH,
         type = SecuritySchemeType.OAUTH2,
-        description = "OpenAPI OAUTH2 security schema with JWT token",
+        description = "OpenAPI OAUTH2 security schema with JWT token for SSO",
         scheme = "bearer",
         bearerFormat = "JWT",
         flows = @OAuthFlows(
@@ -41,9 +41,9 @@ import org.slf4j.LoggerFactory;
         in = SecuritySchemeIn.HEADER)
 @OpenAPIDefinition(
         info = @Info(
-                title = "micronaut-java-http-template",
+                title = "micronaut-http-template",
                 version = "0.9.0-SNAPSHOT",
-                description = "micronaut-java-http-template",
+                description = "micronaut-http-template",
                 license = @License(name = "Apache 2.0", url = "https://www.apache.org/licenses/LICENSE-2.0"),
                 contact = @Contact(url = "https://goodforgod.dev", name = "Anton Kurako")),
         servers = {
