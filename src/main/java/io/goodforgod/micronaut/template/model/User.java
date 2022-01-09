@@ -10,23 +10,5 @@ import java.util.UUID;
  */
 @Schema(description = "User")
 @Introspected
-public class User {
-
-    @Schema(description = "User wID")
-    private final UUID id;
-    @Schema(description = "User name", example = "bob")
-    private final String name;
-
-    public User(UUID id, String name) {
-        this.id = id;
-        this.name = name;
-    }
-
-    public UUID getId() {
-        return id;
-    }
-
-    public String getName() {
-        return name;
-    }
-}
+public record User(@Schema(description = "User wID") UUID id,
+                   @Schema(description = "User name", example = "bob") String name) {}

@@ -18,8 +18,8 @@ import reactor.core.publisher.Flux;
  * @author Anton Kurako (GoodforGod)
  * @since 07.12.2021
  */
-@Controller("/users")
 @Introspected
+@Controller("/users")
 public class UserController {
 
     @SecurityRequirement(name = SecurityConfig.AUTHORIZATION)
@@ -33,7 +33,7 @@ public class UserController {
                             content = @Content(mediaType = MediaType.APPLICATION_JSON,
                                     schema = @Schema(implementation = JsonError.class))),
             })
-    @Get(value = "/stream", produces = MediaType.APPLICATION_JSON_STREAM)
+    @Get(produces = MediaType.APPLICATION_JSON_STREAM)
     Flux<User> allStream() {
         return all();
     }
@@ -49,7 +49,7 @@ public class UserController {
                             content = @Content(mediaType = MediaType.APPLICATION_JSON,
                                     schema = @Schema(implementation = JsonError.class))),
             })
-    @Get
+    @Get("/all")
     Flux<User> all() {
         return Flux.just(new User(UUID.randomUUID(), "Bob"), new User(UUID.randomUUID(), "Tom"));
     }
