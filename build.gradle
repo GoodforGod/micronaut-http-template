@@ -23,7 +23,7 @@ sourceCompatibility = JavaVersion.VERSION_17
 targetCompatibility = JavaVersion.VERSION_17
 
 micronaut {
-    version("3.2.3")
+    version("3.2.4")
     processing {
         incremental(true)
         module(project.name)
@@ -32,10 +32,7 @@ micronaut {
     }
     aot {
         version.set("1.0.0-M5")
-        convertYamlToJava.set(true)
-        optimizeClassLoading.set(true)
-        precomputeOperations.set(true)
-        optimizeServiceLoading.set(true)
+        configFile = file("config/micronaut-aot.properties")
     }
 }
 

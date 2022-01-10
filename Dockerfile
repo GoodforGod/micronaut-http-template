@@ -6,13 +6,16 @@ ARG BUILD_DIR=build/libs
 RUN mkdir -p "$APP_DIR"
 COPY $BUILD_DIR/*all.jar $APP_DIR/application.jar
 
-ENV JAVA_OPTS = '-Xms32m \
-    -Xss512k \
-    -XX:+ExitOnOutOfMemoryError \
-    -XX:+CompactStrings \
-    -XX:+UseContainerSupport \
-    -XX:+UnlockExperimentalVMOptions \
-    -XX:+UseShenandoahGC'
-
 EXPOSE 8080/tcp
-ENTRYPOINT ["java", "-Dfile.encoding=UTF-8", "-jar", "/opt/application/application.jar" ]
+ENTRYPOINT ["java", \
+            "-Duser.timeZone=Europe/Moscow",  \
+            "-Dfile.encoding=UTF-8", \
+            "-Xss256k", \
+            "-Xms32m", \
+            "-XX:+UnlockExperimentalVMOptions", \
+            "-XX:+UseShenandoahGC", \
+            "-XX:+ExitOnOutOfMemoryError", \
+            "-XX:+UseContainerSupport", \
+            "-XX:+CompactStrings", \
+            "-jar", \
+            "/opt/application/application.jar" ]

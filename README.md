@@ -1,6 +1,6 @@
-# Micronaut Http Application Template
+# Micronaut HTTP Application Template
 
-Template for Micronaut Http Application for Java 17+.
+Template for Micronaut HTTP Application for Java 17+.
 
 ## Features
 - Gradle, build, wrapper, properties configured.
