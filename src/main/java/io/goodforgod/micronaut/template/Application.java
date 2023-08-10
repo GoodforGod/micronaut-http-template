@@ -42,7 +42,7 @@ import org.slf4j.LoggerFactory;
 @OpenAPIDefinition(
         info = @Info(
                 title = "micronaut-http-template",
-                version = "0.9.0-SNAPSHOT",
+                version = "4.0.2-SNAPSHOT",
                 description = "micronaut-http-template",
                 license = @License(name = "Apache 2.0", url = "https://www.apache.org/licenses/LICENSE-2.0"),
                 contact = @Contact(url = "https://goodforgod.dev", name = "Anton Kurako")),
